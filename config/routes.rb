@@ -1,5 +1,5 @@
-FinalProject::Application.routes.draw do
-  get "users/index"
+Final::Application.routes.draw do
+  get "sessions/new"
   get "users/new"
 
   root 'users#index'
