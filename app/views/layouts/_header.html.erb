@@ -1,16 +1,27 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
-				<%= link_to "Comics", '#', id: "logo" %>
+
+				
+
+				<%= link_to "Comics", root_url, id: "logo" %>
+
 				<nav>
 					<ul class="nav pull-right">
+						<form class="navbar-search pull-left">
+          		<input type="text" class="search-query" placeholder="Search"></input>
+        		</form>
+
 						<li><%= link_to "My Collection", '#' %></li>
+						
 						<% if current_user %>
-						<li>Logged in as <%= current_user.email %></li>
-						<li><%= link_to "Log Out", logout_path %></li>
+							<li><%= link_to current_user.email %></li>
+							<li><%= link_to "Logout", logout_path %></li>
 						<% else %>
-						<li><%= link_to "Sign in", new_user_path %></li>
+						
+							<li><%= link_to "Sign in", login_path %></li>
 						<% end %>
+
 					</ul>
 				</nav>
 			</div>
