@@ -1,2 +1,15 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h1>Log In</h1>
+
+<%= form_tage sessions_path do %>
+	<%= label_tag :email %>
+	<%= text_field_tage :email, params[:email] %>
+
+	<%= label_tag :password %>
+	<%= password_field_tage :password %>
+
+	<%= check_box_tage :remember_me, 1, params[:remember_me] %>
+	<%= label_tage :remember_me %>
+
+	<%= submit_tag "Log in" %>
+
+<% end %>

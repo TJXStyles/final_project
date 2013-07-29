@@ -5,7 +5,12 @@
 				<nav>
 					<ul class="nav pull-right">
 						<li><%= link_to "My Collection", '#' %></li>
-						<li><%= link_to "Sign in", '#' %></li>
+						<% if current_user %>
+						<li>Logged in as <%= current_user.email %></li>
+						<li><%= link_to "Log Out", logout_path %></li>
+						<% else %>
+						<li><%= link_to "Sign in", new_user_path %></li>
+						<% end %>
 					</ul>
 				</nav>
 			</div>

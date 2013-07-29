@@ -1,6 +1,9 @@
 Final::Application.routes.draw do
-  get "sessions/new"
-  get "users/new"
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => "login"
+  get "sigup" => "users#new", :as => "signup"
+  resources :users
+  resources :session
 
   root 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.
