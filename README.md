@@ -8,4 +8,6 @@ This is my final project for Bitmaker Labs. It is a comic book database to store
 
 * User reviews
 
-* Create pull lists and email them to your local comic book shop
+* Add books to your collections and create pull lists and email them to your local comic book shop
+
+* Uses [Comicvine api](http://www.comicvine.com/api/)

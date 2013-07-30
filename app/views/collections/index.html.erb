@@ -1,18 +1,21 @@
-<h1>Collections</h1>
+<% provide(:title, 'My Collections') %>
+<h1>My Collections</h1>
 
 <% if current_user %>
 <ul>
 	<li><%= link_to "Owned", '#' %></li>
 	<li><%= link_to "Wish List", '#' %></li>
 	<li><%= link_to "Pull List", '#' %></li>
-	
+		<% @collections.each do |collection| %>
+			<li><%= link_to collection.name, collection_path(collection) %></li>
+		<% end %>
 		<%= form_for @collection do |f| %>
 			<%= f.text_field :name %><br />
 			<%= f.submit %>
 		<% end %>
-		<% else %>
+	<% else %>
 		<p><%= link_to "Login", login_path %> or <%= link_to "Sign up", signup_path %> to add Collections</p>
-	<% end %>
+<% end %>
 
 	
 
