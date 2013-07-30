@@ -12,7 +12,7 @@
           		<input type="text" class="search-query" placeholder="Search"></input>
         		</form>
 
-						<li><%= link_to "My Collection", '#' %></li>
+						<li><%= link_to "My Collections", collections_path %></li>
 						
 						<% if current_user %>
 							<li><%= link_to current_user.email %></li>

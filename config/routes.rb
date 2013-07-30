@@ -1,16 +1,11 @@
 Final::Application.routes.draw do
-  get "collections/index"
-  get "collections/show"
-  get "collections/new"
-  get "collections/create"
-  get "collections/destroy"
-  get "collections/edit"
-  get "collections/update"
+  
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
+  resources :collections
 
   root 'users#index'
   # The priority is based upon order of creation: first created -> highest priority.

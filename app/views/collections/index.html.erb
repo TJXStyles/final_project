@@ -1,2 +1,11 @@
-<h1>Collections#index</h1>
-<p>Find me in app/views/collections/index.html.erb</p>
+<h1>Collections</h1>
+
+<ul>
+	<li><%= link_to "Owned", '#' %></li>
+	<li><%= link_to "Wish List", '#' %></li>
+	<li><%= link_to "Pull List", '#' %></li>
+	<%= form_for :collection do |f| %>
+		<%= f.text_field :name %><br />
+		<%= f.submit %>
+	<% end %>
+</ul>

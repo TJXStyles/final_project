@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# collection1 = user.collection.create!(name: "Owned")
+
+# collection2 = user.collection.create!(name: "Wish List")
+
+# collection3 = user.collection.create!(name: "Pull List")
