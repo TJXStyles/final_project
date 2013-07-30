@@ -4,7 +4,7 @@
 	<li><%= link_to "Owned", '#' %></li>
 	<li><%= link_to "Wish List", '#' %></li>
 	<li><%= link_to "Pull List", '#' %></li>
-	<%= form_for :collection do |f| %>
+	<%= form_for @collection do |f| %>
 		<%= f.text_field :name %><br />
 		<%= f.submit %>
 	<% end %>

@@ -1,31 +1,43 @@
 class CollectionsController < ApplicationController
   def index
     @collections = Collection.all
+    @collection = current_user.collections.build
+    # build and new
+    # build = 
+    # conllection.new
+    # conleection.user_id = current_user.id
   end
 
   def show
-    @collection = Collection.new(params[:collection])
-    if @collection.save
-      flash[:notice] = "Save Successful"
-      redirect_to collections_path
-    else
-      render :new
+    @collection = Collection.find(params[:id])
+    respond_to do |format|
+      format.html
     end
   end
 
   def new
-    @collection = Collection.new
+    @collection = current_user.collections.new
+    respond_to do |format|
+      format.html
+    end
   end
 
   def destroy
+    @collection = current_user.collections.find(params[:id])
+    @collection.destroy
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def edit
+    @collection = current_user.collections.find(params[:id])
   end
 
 #Not sure if this is correct
   def create
-    @collection = Collection.new(params[:collection])
+    @collection = Collection.new(collection_params)
     
     respond_to do |format|
       if @collection.save
@@ -38,8 +50,8 @@ class CollectionsController < ApplicationController
 
 private
 
-def collection_params
-  params.require(:user).permit(:name, :user_id)
-end
+  def collection_params
+    params.require(:user).permit(:name, :user_id)
+  end
 
 end
