@@ -1,7 +1,7 @@
 class CollectionsController < ApplicationController
   def index
     @collections = Collection.all
-    @collection = current_user.collections.build
+    @collection = Collection.new
     # build and new
     # build = 
     # conllection.new
@@ -38,7 +38,7 @@ class CollectionsController < ApplicationController
 #Not sure if this is correct
   def create
     @collection = Collection.new(collection_params)
-    
+    @collection.user_id = current_user.id
     respond_to do |format|
       if @collection.save
         format.html { redirect_to @collection }
@@ -51,7 +51,7 @@ class CollectionsController < ApplicationController
 private
 
   def collection_params
-    params.require(:user).permit(:name, :user_id)
+    params.require(:collection).permit(:name, :user_id)
   end
 
 end
