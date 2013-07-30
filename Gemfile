@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'sorcery', '0.8.2'
 gem 'bootstrap-sass'
 gem 'thin'
+gem 'comic_vine'
 
 group :development do
 	gem 'better_errors'

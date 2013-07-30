@@ -52,6 +52,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    comic_vine (0.1.1)
+      json
     daemons (1.1.9)
     debug_inspector (0.0.2)
     diff-lcs (1.2.4)
@@ -186,6 +188,7 @@ DEPENDENCIES
   bootstrap-sass
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
+  comic_vine
   jbuilder (~> 1.2)
   jquery-rails
   pg (= 0.15.1)

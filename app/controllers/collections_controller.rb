@@ -17,7 +17,7 @@ class CollectionsController < ApplicationController
 
   def update
     @collection = Collection.find(params[:id])
-    if @collection.update_attributes(params[:collection])
+    if @collection.update_attributes(collection_params)
       redirect_to @collection, notice: "Collection was updated Successfully"
     else
       render :edit
@@ -56,7 +56,7 @@ class CollectionsController < ApplicationController
 private
 
   def collection_params
-    params.require(:collection).permit(:name, :user_id, :collection)
+    params.require(:collection).permit(:name, :user_id)
   end
 
 end

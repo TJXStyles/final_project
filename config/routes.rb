@@ -1,5 +1,12 @@
 Final::Application.routes.draw do
   
+  get "books/index"
+  get "books/show"
+  get "books/new"
+  get "books/update"
+  get "books/destroy"
+  get "books/create"
+  get "books/edit"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
