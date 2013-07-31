@@ -1,5 +1,7 @@
 Final::Application.routes.draw do
   
+  get "reviews/new"
+  get "reviews/show"
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => "login"
   get "signup" => "users#new", :as => "signup"
