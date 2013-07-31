@@ -10,6 +10,8 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
+    @books = @collection.books
+    @book = Book.new
     respond_to do |format|
       format.html
     end
@@ -26,9 +28,6 @@ class CollectionsController < ApplicationController
 
   def new
     @collection = current_user.collections.new
-    respond_to do |format|
-      format.html
-    end
   end
 
   def destroy
@@ -42,7 +41,6 @@ class CollectionsController < ApplicationController
     @collection = current_user.collections.find(params[:id])
   end
 
-#Not sure if this is correct
   def create
     @collection = Collection.new(collection_params)
     @collection.user_id = current_user.id

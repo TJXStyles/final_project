@@ -1,2 +1,12 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h1>New Books</h1>
+
+	<%= form_for @book do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :author %>
+	<%= f.text_field :author %>
+	<div>
+		<%= f.submit %>
+	</div>
+	<% end %>

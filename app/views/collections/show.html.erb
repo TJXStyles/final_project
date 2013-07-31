@@ -3,7 +3,14 @@
 <p>This Collection contains books</p>
 
 <% if current_user == @collection.user %>
-<%= link_to 'Edit', edit_collection_path(@collection) %>
-<%= link_to 'Delete', @collection, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger"} %>
+	<% @books.each do |book| %>
+		<%= book.title %>
+		<%= book.issue %>
+	<% end %>
+	<%= link_to 'Add Books', new_book_path, class: 'btn btn-primary' %>
+	<div>
+	<%= link_to 'Edit', edit_collection_path(@collection) %>
+	<%= link_to 'Delete', @collection, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger"} %>
 <% end %>
 <p><%= link_to 'Back', collections_path %></p>
+</div>
