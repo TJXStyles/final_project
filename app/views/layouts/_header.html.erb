@@ -1,16 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">	
-
-				<%= link_to "Comic databox", root_url, id: "logo" %>
-
+				<%= link_to "Comic Databox", root_url, id: "logo" %>
 				<nav>
 					<ul class="nav pull-right">
 						<form class="navbar-search pull-left">
           		<input type="text" class="search-query" placeholder="Search"></input>
         		</form>
 
-						<li><%= link_to "My Collections", collections_path %></li>
+						<li class="<%= 'active' if current_page? collections_path or @show_path %>"><%= link_to "My Collections", collections_path %></li>
 						
 						<% if current_user %>
 							<li><%= link_to current_user.email, user_path(:id) %></li>

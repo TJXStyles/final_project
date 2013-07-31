@@ -1,5 +1,6 @@
+<% provide(:title, 'Collections') %>
 <h1><%= @collection.name %></h1>
-
+<div class="container">
 This collection contains <%= @collection.books.count %> comics<br/>
 <%= link_to 'Edit', edit_collection_path(@collection) %>
 <div>
@@ -12,12 +13,13 @@ This collection contains <%= @collection.books.count %> comics<br/>
 		Title: <%=link_to book.title, book_path %><br/>
 		Issue:<br/>
 		Author: <%= book.author %><br/>
-		<%= link_to "Delete Comic", book, method: :delete, data: { confirm: "Delete this book?", class: 'btn btn-danger' } %>
+		<%= link_to "Delete Comic", book, class: 'btn btn-danger', method: :delete, data: { confirm: "Delete this book?" } %>
 	</div>
 <% end %>
 	
 	<div>
-		<%= link_to 'Delete', @collection, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger"} %>
+		<%= link_to 'Delete Collection', @collection, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 <p><%= link_to 'Back', collections_path %></p>
+</div>
 </div>

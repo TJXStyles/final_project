@@ -12,6 +12,7 @@ class CollectionsController < ApplicationController
     @collection = Collection.find(params[:id])
     @books = @collection.books
     @book = Book.new
+    @show_path = true
     respond_to do |format|
       format.html
     end

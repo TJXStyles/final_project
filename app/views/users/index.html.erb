@@ -1,3 +1,4 @@
+<% provide(:title, 'Home') %>
 <% if current_user %>
 	<div class="container">
 		<div class="span12">
@@ -11,7 +12,7 @@
 <% else %>
 
 	<div class="center hero-unit">
-		<h1>Comic<span id="datab">Data</span><span id="dbox">Box</span></h1>
+		<h1 id="comicred">Comic<span id="datab">Data</span><span id="dbox">Box</span></h1>
 		<h2>Your online resource for your growing comicbook collection</h2>
 		<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
 	</div>

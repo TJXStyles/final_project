@@ -2,7 +2,8 @@
 <h1>My Collections</h1>
 
 <% if current_user %>
-<ul>
+<div class="container">
+<ul class="unstyled">
 	<li><%= link_to "Owned", '#' %></li>
 	<li><%= link_to "Wish List", '#' %></li>
 	<li><%= link_to "Pull List", '#' %></li>
@@ -13,6 +14,7 @@
 			<%= f.text_field :name %><br />
 			<%= f.submit %>
 		<% end %>
+	</div>
 	<% else %>
 		<p><%= link_to "Login", login_path %> or <%= link_to "Sign up", signup_path %> to add Collections</p>
 <% end %>
