@@ -1,6 +1,5 @@
 # Comic Book Collector Database
-
-This is my final project for Bitmaker Labs. It is a comic book database to store your collected works.
+###This is my final project for Bitmaker Labs. It is a comic book database to store your collected works.
 
 * Search for comic books
 
