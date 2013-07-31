@@ -30,10 +30,34 @@ textarea {
   margin-bottom: 10px;
 }
 
+.span4 {
+  border: 1px solid #000;
+}
+
+.lead {
+  text-align: center;
+}
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+}
+
+.hero-unit h1 {
+  font-family: 'Bangers';
+  text-transform: uppercase;
+}
+
+span#datab {
+  color: #1B8EE0;
+  text-shadow: 2px 2px #000;
+  letter-spacing: 1px;
+}
+
+span#dbox {
+  color: #FFFFFF;
+  text-shadow: 2px 2px #000;
+  letter-spacing: 1px
 }
 
 h1 {
@@ -62,14 +86,16 @@ p {
 #logo {
   float: left;
   font-size: 2.5em;
-  color: #FF0000;
+  color: #FFF;
   text-transform: uppercase;
   padding-top: 4px;
+  letter-spacing: -1px;
   font-weight: bold;
   line-height: 1;
   position: absolute;
   text-align: center;
   margin: auto;
+  /*font-family: "Helvetica";*/
   font-family: 'Bangers', cursive;
 	&:hover {
   	color: #fff;

@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   def destroy
     @book = current_user.books.find(params[:id])
     @book.destroy
-    redirect_to collections_path(@collection)
+    redirect_to collection_path(@collection)
   end
 
   def create

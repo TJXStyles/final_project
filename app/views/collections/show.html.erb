@@ -1,23 +1,23 @@
 <h1><%= @collection.name %></h1>
 
-<p>This Collection contains <%= @collection.books.count %> books</p>
+This collection contains <%= @collection.books.count %> comics<br/>
+<%= link_to 'Edit', edit_collection_path(@collection) %>
 <div>
-	<%= link_to 'Add Books', new_book_path, class: 'btn btn-inverse' %>
+	<%= link_to 'Add Comic', new_book_path, class: 'btn btn-inverse' %>
 </div>
 
 <% if current_user == @collection.user %>
 	<% @books.each do |book| %>
 	<div class="well">
-		Book: <%=link_to book.title, book_path %><br/>
+		Title: <%=link_to book.title, book_path %><br/>
+		Issue:<br/>
 		Author: <%= book.author %><br/>
-		<%= link_to "Delete Book", book, method: :delete, data: { confirm: "Delete this book?", class: 'btn btn-danger' } %>
-</div>
-
-	<% end %>
+		<%= link_to "Delete Comic", book, method: :delete, data: { confirm: "Delete this book?", class: 'btn btn-danger' } %>
+	</div>
+<% end %>
 	
 	<div>
-	<%= link_to 'Edit', edit_collection_path(@collection) %>
-	<%= link_to 'Delete', @collection, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger"} %>
+		<%= link_to 'Delete', @collection, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-danger"} %>
 <% end %>
 <p><%= link_to 'Back', collections_path %></p>
 </div>

@@ -6,10 +6,11 @@
 
 	<%= label_tag :password %>
 	<%= password_field_tag :password %>
-
+<div>
 	<%= check_box_tag :remember_me, 1, params[:remember_me] %>
 	<%= label_tag :remember_me %>
-
+</div>
+<div>
 	<%= submit_tag "Log in" %>
-
+</div>
 <% end %>
