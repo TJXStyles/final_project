@@ -1,13 +1,18 @@
-# Comic Book Collector Database Final Project
+# Comic Book Collector Database
+## Final Project
 
 This is my final project for Bitmaker Labs. It is a comic book database to store your collected works.
 
-* Search for Comics
+* Search for comic books
 
-* Keep track of your comic books
+* Keep track of your comic books.
 
-* User reviews
+* Add comics to customizable collections.
 
-* Add books to your collections and create pull lists and email them to your local comic book shop
+* Create pull lists and email them to your local comic book shop.
+
+* Comic book reviews.
+
+* Share your collection with your friends and see their collection.
 
 * Uses [Comicvine api](http://www.comicvine.com/api/)
