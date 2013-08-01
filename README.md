@@ -1,10 +1,12 @@
-# Comic Book Collector Database
+# Comic Databox 
+
+###Comic book collector database.
 
 This is my final project for Bitmaker Labs. It is an online database to store your collected works.
 
 * Search for comic books
 
-* Keep track of your comic books.
+* Keep track of your personal comic book collection
 
 * Add comics to customizable collections.
 
