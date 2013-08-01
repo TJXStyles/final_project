@@ -2,6 +2,7 @@ class CollectionsController < ApplicationController
   def index
     @collections = Collection.all
     @collection = Collection.new
+
     # build and new
     # build = 
     # conllection.new
@@ -49,6 +50,14 @@ class CollectionsController < ApplicationController
       redirect_to collections_path
     else
       render :new
+    end
+  end
+
+  def search
+    @collections = Collection.where("title LIKE '%#{params[:query]}%'")
+
+    respond_to do |format|
+      format.json { render @collections }
     end
   end
 

@@ -1,0 +1,1 @@
+ComicVine::API.key = "043e8cb422fb0b74a379bd13508e92b6dec2d1da"

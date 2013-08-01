@@ -10,7 +10,7 @@ This collection contains <%= @collection.books.count %> comics<br/>
 <% if current_user == @collection.user %>
 	<% @books.each do |book| %>
 	<div class="well">
-		Title: <%=link_to book.title, book_path %><br/>
+		Title: <%=link_to book.title, book %><br/>
 		Issue:<br/>
 		Author: <%= book.author %><br/>
 		<%= link_to "Delete Comic", book, class: 'btn btn-danger', method: :delete, data: { confirm: "Delete this book?" } %>
